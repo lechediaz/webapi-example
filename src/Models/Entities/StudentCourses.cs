@@ -1,6 +1,8 @@
+using webapi_example.Models.Base;
+
 namespace webapi_example.Models.Entities
 {
-    public class StudentCourses
+    public class StudentCourses : IHasId
     {
         public int Id { get; set; }
         public int StudentId { get; set; }

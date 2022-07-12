@@ -13,8 +13,10 @@ builder.Services.AddSwaggerGen();
 string connectionString = builder.Configuration.GetConnectionString("ApplicationDbContext");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
-// Registrate repositories
+// Register the repositories
 builder.Services.AddRepositories();
+
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 

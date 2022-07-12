@@ -1,12 +1,9 @@
 using System.ComponentModel.DataAnnotations;
-using webapi_example.Models.Base;
 
-namespace webapi_example.Models.Entities
+namespace webapi_example.Models.Dtos
 {
-    public class Student : IHasId
+    public class CreateStudentDto
     {
-        public int Id { get; set; }
-
         [Required]
         [MaxLength(60)]
         public string Name { get; set; }
@@ -18,7 +15,5 @@ namespace webapi_example.Models.Entities
         [Required]
         [MaxLength(80)]
         public string Email { get; set; }
-
-        public virtual ICollection<StudentCourses> EnrolledCourses { get; set; }
     }
 }
