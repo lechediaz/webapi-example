@@ -17,6 +17,9 @@ namespace webapi_example.Controllers
         {
         }
 
+        /// <summary>
+        /// Permite asociar un curso a un estudiante.
+        /// </summary>
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] CreateStudentCoursesDto createStudentCoursesDto)
         {
@@ -25,6 +28,9 @@ namespace webapi_example.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Permite eliminar la asociación entre un curso a un estudiante.
+        /// </summary>
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
