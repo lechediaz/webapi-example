@@ -1,10 +1,13 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using webapi_example.Models.Base;
 
 namespace webapi_example.Models.Entities
 {
+    [Table("Course")]
     public class Course : IHasId
     {
+        [Column("CourseId")]
         public int Id { get; set; }
 
         [Required]
